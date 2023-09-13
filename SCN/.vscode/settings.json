@@ -1,0 +1,11 @@
+{
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./secure_coding_programming_exercises-main",
+        "-p",
+        "test_*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true
+}
