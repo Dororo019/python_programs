@@ -2,11 +2,6 @@
 
 a = 3
 
-
-
-
- 
-
 # 1. print the type of the variable
 print(type(a))
 #   Convert integer variable to float and confirm the type cast worked (print it out)
