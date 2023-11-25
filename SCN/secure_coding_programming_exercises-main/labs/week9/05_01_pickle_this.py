@@ -1,9 +1,7 @@
 """
 Pickle the following class
-
-
 """
-
+import pickle
 class Car:
     cars_created = 0
     def __init__(self, num_tires = 2, color = "red", gas=True):
@@ -22,11 +20,11 @@ class Car:
             return True
         return False
 
-## pickle the actual class Car 
 
+# Create an instance of the Car class
+my_car = Car(num_tires=4, color="bluish-purple", gas=True)
 
-
-my_car = Car(4, 'blue', True)
-# pickle your instance of the car
-
-
+# Open a file in binary write mode
+with open('car.pkl', 'wb') as file:
+# Use the pickle.dump() function to pickle and write the object to the file
+    pickle.dump(my_car, file)

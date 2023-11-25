@@ -8,3 +8,22 @@
 
 
 """
+from pathlib import Path
+
+# Create a new directory
+new_dir = Path('new_split_files')
+new_dir.mkdir(exist_ok=True)
+# Open the file
+with open('winnie_pooh.txt', 'r') as file:
+    lines = file.readlines()
+
+# Split the lines into chunks of 100 lines each
+chunks = []
+for i in range(0, len(lines), 100):
+    chunk = lines[i:i + 100]
+    chunks.append(chunk)
+
+# Write each chunk to a new file
+for i, chunk in enumerate(chunks):
+    with open(new_dir / f'file_{i}.txt', 'w') as new_file:
+        new_file.writelines(chunk)

@@ -17,3 +17,29 @@ The second way is fine for quick scripts though
 
 """
 
+
+from pathlib import Path
+
+##
+
+
+cwd = Path.cwd()
+path= Path.cwd().joinpath("week9","winnie_pooh.txt")
+print(path)
+
+# 1. Print out the first line of the file
+with path.open() as file:
+    print(file.readline())
+
+# 2. Print out the entire file
+with path.open() as file:
+    print(file.read())
+
+# 3. Print the last line of the file
+with path.open() as file:
+    lines = file.readlines()
+    print(lines[-1])
+
+# 4. Add a new sentence to the file
+with path.open('a') as file:
+    file.write('I AM A NEW SENTENCE!')
