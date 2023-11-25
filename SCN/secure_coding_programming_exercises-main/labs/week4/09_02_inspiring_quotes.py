@@ -6,7 +6,7 @@
 
 famous_quotes = [
     {
-        "full_name": "Isaac Asimov",
+        'full_name': 'Isaac Asimov',
         "quote": "I do not fear computers. I fear lack of them.",
     },
     {
@@ -37,3 +37,24 @@ famous_quotes = [
         "quote": "Standards are always out of date.  That’s what makes them standards.",
     },
 ]
+
+print(famous_quotes)
+
+def quotes():
+    for dict in famous_quotes():
+        
+
+
+
+# keys = famous_quotes.keys()
+# values = famous_quotes.values()
+
+
+
+
+
+
+# Loop through the array and let's print out the formatted quote for each person
+# for person in famous_quotes:
+    
+# Use f-strings to insert the values of name, last name, and quote into the output

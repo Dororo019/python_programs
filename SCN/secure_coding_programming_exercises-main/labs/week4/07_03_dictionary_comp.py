@@ -4,3 +4,5 @@
 
 # Use a comprehension to make this easy
 
+# for n in range(1,10):
+print(dict([(n,n**2) for n in range(1,10)]))
