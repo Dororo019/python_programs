@@ -22,19 +22,33 @@ many_nests = ["a", ["bb", ["ccc", "ddd"], "ee", "ff"], "g", "h"]
 # should get back
 # ['a', 'bb', 'ccc', 'ddd', 'ee', 'ff', 'g', 'h']
 
-final_list = []
-while True:
-    for element in hard_nested_list:
-        if isinstance(element, (list, tuple, str)):
-            final_list.append(element)
-        elif isinstance(element, (int, float, str)):
-            final_list.append(element)  # string,
 
-    for elem in final_list:
-        if isinstance(element, (tuple, list)):
-            hard_nested_list = []
-            final_list = hard_nested_list
-            break  # the else below will not execute, we repeat the while loop
-    else:  # no break!!! only executes if for loop finishes
-        break
-
+def deep_flatten(any_list):
+    while True:
+        final_list=[]
+        for element in any_list:
+            if isinstance(element, (list, tuple)):
+                final_list.extend(element)
+                # print(final_list)
+            else:
+                final_list.append(element)  # string,
+                
+        any_list = final_list
+        if not any(isinstance(i, (list, tuple)) for i in any_list):
+            break
+    return any_list
+            # print(final_list)
+            # for elem in final_list:
+            #     if isinstance(elem, (tuple, list)):
+            #         hard_nested_list = []
+            #         # hard_nested_list=final_list
+            #         
+                    
+            #         break  # the else below will not execute, we repeat the while loop
+        
+        # print(final_list)
+        # # else:  # no break!!! only executes if for loop finishes
+        # break
+        
+print(deep_flatten(hard_nested_list ))
+print(deep_flatten(many_nests))

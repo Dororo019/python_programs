@@ -3,3 +3,11 @@
 
 # example input: (1,2), (2,2), (3,2), (4,5)
 # output: [2,4,6,20]
+def mul_tables(*tuples):
+    res=[]
+    for a, b in tuples:
+        mul = a*b
+        res.append(mul)
+    return res
+
+print(mul_tables( (1,2), (2,2), (3,2), (4,5)))

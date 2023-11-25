@@ -4,3 +4,7 @@ You should generate 1000 random numbers.
 
 
 """
+import random
+
+random_numbers = [random.random() for elem in range(1000)]
+print(random_numbers)
