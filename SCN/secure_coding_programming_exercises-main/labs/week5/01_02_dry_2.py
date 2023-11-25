@@ -6,3 +6,10 @@
 
 ## Input: a list of integers, a number 'n'
 ## output: a new list that only has retains numbers which are divisible by n
+def num_divisible_by_n(list, n):
+    return [i for i in list if i % n == 0]
+
+# Example usage:
+numbers = [2, 1, 3, 5, 1, 2, 3, 12, 3, 45, 1, 2, 3]
+n= 3
+print(num_divisible_by_n(numbers,n))  

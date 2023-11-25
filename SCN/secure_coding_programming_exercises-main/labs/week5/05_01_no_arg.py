@@ -7,6 +7,7 @@ def no_args():
     ideas: use a global
     Idea: just print something out
     """
+    print("Hello idk why no args")
 
-
+no_args()
 # call your function down here

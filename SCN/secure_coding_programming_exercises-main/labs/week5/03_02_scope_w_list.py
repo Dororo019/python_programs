@@ -7,6 +7,7 @@ def check_for_vowels(string_to_count):
     """
     Function will count if all vowels occur within the string
     """
+    count = 0
     for char in string_to_count:
         if char.lower() in list_of_vowels:
             list_of_vowels.remove(char)
@@ -19,11 +20,11 @@ def check_for_vowels(string_to_count):
 
 # run the above function.
 
-print(check_for_vowels("sequoia"))  # should be true
+print(check_for_vowels("sequoia"))  # should be true yes it's true
 
-## can you re-use the function?
+# can you re-use the function? we cannot reuse here so i need tyo find out
 
-print(check_for_vowels("The"))  # this should be False!
+print(check_for_vowels("The"))  # this should be False! why there is a e in the "the"
 
 # what is wrong?
 

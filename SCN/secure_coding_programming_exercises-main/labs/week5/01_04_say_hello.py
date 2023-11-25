@@ -6,5 +6,7 @@
 
 
 def say_hello():
-    pass  # delete this and finish the function
+    print(f"Hey!!{name}, your pants are on fire!!!")
 
+name = input("Give the name:")
+say_hello()

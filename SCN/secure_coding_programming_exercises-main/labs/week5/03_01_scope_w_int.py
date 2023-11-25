@@ -10,6 +10,7 @@ x = 100
 
 
 def add_to_me(num):
+    x=100
     y = num + x
     print(f"x inside the function is: {x}")
     return y
@@ -18,4 +19,4 @@ def add_to_me(num):
 z = add_to_me(10)
 print(z)
 
-print(x)  # what do you think will print out?
+print(x)  # what do you think will print out? it printed  110 and 100
